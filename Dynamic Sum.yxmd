@@ -1,0 +1,254 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2018.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="78" y="6" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\jdunkerley.SCOTT\Downloads\Total by Row.xlsx|||`Sheet1$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Total by Row.xlsx
+Table=`Sheet1$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Staff_Id" source="File: C:\Users\jdunkerley.SCOTT\Downloads\Total by Row.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Engagement_Code" size="255" source="File: C:\Users\jdunkerley.SCOTT\Downloads\Total by Row.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Oct. 2017" source="File: C:\Users\jdunkerley.SCOTT\Downloads\Total by Row.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Nov. 2017" source="File: C:\Users\jdunkerley.SCOTT\Downloads\Total by Row.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Dec. 2017" source="File: C:\Users\jdunkerley.SCOTT\Downloads\Total by Row.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Jan. 2018" source="File: C:\Users\jdunkerley.SCOTT\Downloads\Total by Row.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Feb. 2018" source="File: C:\Users\jdunkerley.SCOTT\Downloads\Total by Row.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Mar. 2018" source="File: C:\Users\jdunkerley.SCOTT\Downloads\Total by Row.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Apr. 2018" source="File: C:\Users\jdunkerley.SCOTT\Downloads\Total by Row.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="May 2018" source="File: C:\Users\jdunkerley.SCOTT\Downloads\Total by Row.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Jun. 2018" source="File: C:\Users\jdunkerley.SCOTT\Downloads\Total by Row.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Jul. 2018" source="File: C:\Users\jdunkerley.SCOTT\Downloads\Total by Row.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Aug. 2018" source="File: C:\Users\jdunkerley.SCOTT\Downloads\Total by Row.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Sep. 2018" source="File: C:\Users\jdunkerley.SCOTT\Downloads\Total by Row.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Last Month" size="255" source="File: C:\Users\jdunkerley.SCOTT\Downloads\Total by Row.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Total_Revenue" size="255" source="File: C:\Users\jdunkerley.SCOTT\Downloads\Total by Row.xlsx|||`Sheet1$`" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="174" y="6" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>RecordID</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Transpose.Transpose">
+        <Position x="282" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ErrorWarn>Warn</ErrorWarn>
+          <KeyFields>
+            <Field field="RecordID" />
+            <Field field="Staff_Id" />
+            <Field field="Engagement_Code" />
+          </KeyFields>
+          <DataFields>
+            <Field field="RecordID" selected="False" />
+            <Field field="Staff_Id" selected="False" />
+            <Field field="Engagement_Code" selected="False" />
+            <Field field="Oct. 2017" selected="True" />
+            <Field field="Nov. 2017" selected="True" />
+            <Field field="Dec. 2017" selected="True" />
+            <Field field="Jan. 2018" selected="True" />
+            <Field field="Feb. 2018" selected="True" />
+            <Field field="Mar. 2018" selected="True" />
+            <Field field="Apr. 2018" selected="True" />
+            <Field field="May 2018" selected="True" />
+            <Field field="Jun. 2018" selected="True" />
+            <Field field="Jul. 2018" selected="True" />
+            <Field field="Aug. 2018" selected="True" />
+            <Field field="Sep. 2018" selected="True" />
+            <Field field="Last Month" selected="False" />
+            <Field field="Total_Revenue" selected="False" />
+            <Field field="*Unknown" selected="False" />
+          </DataFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTranspose" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="390" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="RecordID" action="GroupBy" rename="RecordID" />
+            <SummarizeField field="Value" action="Sum" rename="Sum_Value" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="462" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="RecordID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="RecordID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_RecordID" selected="False" />
+                <SelectField field="Right_RecordID" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="558" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\JDUNKE~1.SCO\AppData\Local\Temp\Engine_27168_30a5f56f3ef94a63a0c94d4623741e78_\Engine_22612_4ebe6f2cb09e4bc5866d9608e0adafb8_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="5" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Join" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Dynamic Sum</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
